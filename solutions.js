@@ -21,3 +21,10 @@ const checkPalindrome = (str) => {
   }
   return true;
 }
+
+// sumArray
+const sumArray = (str) => {
+  const arr = [1, 2, 3, 4, 5, 6];
+  const reducer = (accumulator, curr) => accumulator + curr;
+}
+console.log(arr.reduce(reducer));
