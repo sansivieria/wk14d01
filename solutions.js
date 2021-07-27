@@ -54,3 +54,49 @@ for (i = 0; i <= pr; i++) {
   }
 }
 printPrimes(617)
+
+// rps
+
+let selectionStr = ['rock', 'paper', 'scissors'];
+
+function randomMove() {
+  let randy = Math.floor(Math.random() * selectionStr.length);
+  return selectionStr[randy];
+}
+
+let computersMove = randomMove();
+let usersMove = randomMove();
+
+let computerWin = "You lose! Better luck next time."
+let userWin = "You won! You deserve a big trophy."
+let rockWin = "Rock smashed the scissors"
+let paperWin = "Paper covered the rock"
+let scissorsWin = "Scissors cut the paper"
+let noWin = "Woah, a tie!"
+
+function rockPaperScissors(computer, user){
+
+  if (user === computer) {
+    return(`${noWin}`)
+  } else if (computer === "scissors") {
+    if (user === "rock") {
+      return (`${rockWin}`, `${userWin}`);
+    } else if (user === "paper"){
+      return (`${scissorsWin}`, `${computerWin}`);
+    }
+  } else if (computer === "paper") {
+    if (user === "scissors") {
+      return (`${scissorsWin}`, `${userWin}`);
+    } else if (user === "rock"){
+      return (`${paperWin}`, `${computerWin}`);
+    }
+  } else if (computer === "rock") {
+    if (user === "paper") {
+      return (`${paperWin}`, `${userWin}`);
+    } else if (user === "scissors"){
+      return (`${scissorsWin}`, `${computerWin}`);
+    }
+  } else {
+    return ('No contest!');
+  }
+}
