@@ -1,4 +1,4 @@
-// verbal questions
+ // verbal questions
 
 // parameter is a variable thats defined in a method,
 // argument is the data passed as the method's parameter
@@ -23,8 +23,34 @@ const checkPalindrome = (str) => {
 }
 
 // sumArray
+
 const sumArray = (str) => {
   const arr = [1, 2, 3, 4, 5, 6];
   const reducer = (accumulator, curr) => accumulator + curr;
 }
 console.log(arr.reduce(reducer));
+
+// prime numbers
+
+function checkPrime(pn){
+  if(pn === 0 || pn === 1 {
+    return false;
+  }
+
+  for(var i = 2; i < pn; i++) {
+    if(pn % i === 0) {
+      return false
+    }
+  }
+  return true
+}
+checkPrime(853)
+
+
+function printPrimes(pr) {
+  console.log('1');
+for (i = 0; i <= pr; i++) {
+    if (checkPrime(i)) console.log(i);
+  }
+}
+printPrimes(617)
